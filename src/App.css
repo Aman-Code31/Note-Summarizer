@@ -1,0 +1,140 @@
+:root {
+  --bg-color: #1a1a1a;
+  --card-bg: #242424;
+  --text-primary: #ffffff;
+  --accent-color: #646cff;
+  --sidebar-width: 280px;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  font-family: Inter, system-ui, sans-serif;
+  height: 100vh;
+  overflow: hidden; /* Stop scrolling on body, scroll inside components instead */
+}
+
+.app-container {
+  display: flex; /* Creates the Side-by-Side layout */
+  height: 100vh;
+}
+
+/* --- SIDEBAR --- */
+.sidebar {
+  width: var(--sidebar-width);
+  background-color: #202020;
+  padding: 2rem 1rem;
+  border-right: 1px solid #333;
+  display: flex;
+  flex-direction: column;
+}
+
+.history-list {
+  overflow-y: auto;
+  flex: 1;
+  margin-top: 1rem;
+}
+
+.history-item {
+  background-color: #2a2a2a;
+  padding: 1rem;
+  margin-bottom: 0.8rem;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 0.2s;
+}
+
+.history-item:hover {
+  border-color: var(--accent-color);
+  background-color: #333;
+}
+
+.history-summary {
+  font-size: 0.9rem;
+  color: #eee;
+  margin-bottom: 0.5rem;
+}
+
+.history-date {
+  font-size: 0.75rem;
+  color: #888;
+}
+
+/* --- MAIN AREA --- */
+.main-content {
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.workspace {
+  display: flex;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 2rem;
+}
+
+.card {
+  background-color: var(--card-bg);
+  padding: 2rem;
+  border-radius: 12px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+textarea {
+  width: 100%;
+  height: 300px;
+  margin: 1rem 0;
+  padding: 1rem;
+  background: #333;
+  border: 1px solid #444;
+  border-radius: 8px;
+  color: white;
+  resize: none;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.btn-secondary {
+  background-color: #2ecc71;
+  color: white;
+  border: none;
+  padding: 0.8rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.btn-primary:hover { background-color: #535bf2; }
+.btn-secondary:hover { background-color: #27ae60; }
+
+.tag {
+  background-color: #333;
+  padding: 4px 8px;
+  border-radius: 4px;
+  margin-right: 8px;
+  font-size: 0.9rem;
+  color: #aaa;
+}
