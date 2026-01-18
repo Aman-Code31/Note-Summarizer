@@ -1,6 +1,6 @@
 # MERN🕸️ + Python🐍
 
-A Full-Stack web Application that uses Python Libraries to Summarize lecture notes and extract key topics.
+A Full-Stack web Application that uses Python Libraries(NLP- Natural Language Processing) to Summarize lecture notes and extract key topics.
 
 ## Tech-Used 💻
 **Frontend** : React.js (Vite) & CSS <br>
